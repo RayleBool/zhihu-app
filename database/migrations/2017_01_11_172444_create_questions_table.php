@@ -16,11 +16,11 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('body');
+            $table->text('body');
             $table->unsignedInteger('user_id');
             $table->integer('comments_count')->default(0);
             $table->integer('followers_count')->default(1);
-            $table->integer('ansowers_count')->default(1);
+            $table->integer('answers_count')->default(0);
             $table->string('close_comment', 8)->default('F');
             $table->string('is_hidden', 8)->default('F');
             $table->timestamps();

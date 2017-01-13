@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Naux\Mail\SendCloudTemplate;
 use Mail;
 
+use App\Question;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -29,6 +31,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function owns(Question $model)
+    {
+        return $this->id == $model->user_id;
+    }
+
 
     /**
      * Send the password reset notification.

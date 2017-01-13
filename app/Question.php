@@ -15,8 +15,18 @@ class Question extends Model
         return $this->belongsToMany(Topic::class)->withTimestamps();
     }
 
-    public function isHidden()
+    public function user()
     {
-        return $this->is_hidden     === 'T';
+        return $this->belongsTo(User::class);
+    }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('is_hidden', 'F');
     }
 }
