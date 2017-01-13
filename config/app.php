@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Zhihu',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,10 @@ return [
         /*
          * Package Service Providers...
          */
-
+         Naux\Mail\SendCloudServiceProvider::class,
+         Prettus\Repository\Providers\RepositoryServiceProvider::class,
+         Laracasts\Flash\FlashServiceProvider::class,
+         Overtrue\LaravelUEditor\UEditorServiceProvider::class,
         //
 
         /*

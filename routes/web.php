@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('email/verfiry/{token}', [
+    'uses'  => 'EmailController@verfiry',
+    'as'    => 'email.verfiry',
+]);
+
+Route::resource('questions', 'QuestionsController', ['names' => [
+        'create'    => 'question.create',
+        'show'      => 'question.show',
+    ]]);

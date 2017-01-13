@@ -8,6 +8,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Naux\Mail\SendCloudTemplate;
 
 class RegisterController extends Controller
 {
@@ -75,15 +76,18 @@ class RegisterController extends Controller
         return $user;
     }
 
-    public function sendVerifyEmailTo()
+    private function sendVerifyEmailTo($user)
     {
-        $data = ['url' => route()];
-        $template = new SendCloudTemplate('zhihu_app_register', $data);
+        $data       = [
+            'url'   => route('email.verfiry', ['token' => $user->confirmation_token]),
+            'name'  => $user->name,
+        ];
+        $template   = new SendCloudTemplate('zhihu_app_register', $data);
 
-        Mail::raw($template, function ($message) {
-            $message->from('us@example.com', 'Laravel');
+        Mail::raw($template, function ($message) use ($user) {
+            $message->from('leiyisheng81@163.com', 'rayle');
 
-            $message->to('foo@example.com');
+            $message->to($user->email);
         });
     }
 

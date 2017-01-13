@@ -3559,5 +3559,670 @@
         ],
         "description": "Symfony DomCrawler Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "guzzle/common",
+        "version": "v3.9.2",
+        "version_normalized": "3.9.2.0",
+        "target-dir": "Guzzle/Common",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Guzzle3/common.git",
+            "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Guzzle3/common/zipball/2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
+            "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "symfony/event-dispatcher": ">=2.1"
+        },
+        "time": "2014-08-11 04:32:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle\\Common": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Common libraries used by Guzzle",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "collection",
+            "common",
+            "event",
+            "exception"
+        ],
+        "abandoned": "guzzle/guzzle"
+    },
+    {
+        "name": "guzzle/stream",
+        "version": "v3.9.2",
+        "version_normalized": "3.9.2.0",
+        "target-dir": "Guzzle/Stream",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Guzzle3/stream.git",
+            "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Guzzle3/stream/zipball/60c7fed02e98d2c518dae8f97874c8f4622100f0",
+            "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0",
+            "shasum": ""
+        },
+        "require": {
+            "guzzle/common": "self.version",
+            "php": ">=5.3.2"
+        },
+        "suggest": {
+            "guzzle/http": "To convert Guzzle request objects to PHP streams"
+        },
+        "time": "2014-05-01 21:36:02",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle\\Stream": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle stream wrapper component",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "Guzzle",
+            "component",
+            "stream"
+        ],
+        "abandoned": "guzzle/guzzle"
+    },
+    {
+        "name": "guzzle/parser",
+        "version": "v3.9.2",
+        "version_normalized": "3.9.2.0",
+        "target-dir": "Guzzle/Parser",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Guzzle3/parser.git",
+            "reference": "6874d171318a8e93eb6d224cf85e4678490b625c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Guzzle3/parser/zipball/6874d171318a8e93eb6d224cf85e4678490b625c",
+            "reference": "6874d171318a8e93eb6d224cf85e4678490b625c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "time": "2014-02-05 18:29:46",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle\\Parser": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Interchangeable parsers used by Guzzle",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "URI Template",
+            "cookie",
+            "http",
+            "message",
+            "url"
+        ],
+        "abandoned": "guzzle/guzzle"
+    },
+    {
+        "name": "guzzle/http",
+        "version": "v3.9.2",
+        "version_normalized": "3.9.2.0",
+        "target-dir": "Guzzle/Http",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Guzzle3/http.git",
+            "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Guzzle3/http/zipball/1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
+            "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
+            "shasum": ""
+        },
+        "require": {
+            "guzzle/common": "self.version",
+            "guzzle/parser": "self.version",
+            "guzzle/stream": "self.version",
+            "php": ">=5.3.2"
+        },
+        "suggest": {
+            "ext-curl": "*"
+        },
+        "time": "2014-08-11 04:32:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle\\Http": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "HTTP libraries used by Guzzle",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "Guzzle",
+            "client",
+            "curl",
+            "http",
+            "http client"
+        ],
+        "abandoned": "guzzle/guzzle"
+    },
+    {
+        "name": "guzzlehttp/promises",
+        "version": "v1.3.1",
+        "version_normalized": "1.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/promises.git",
+            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0"
+        },
+        "time": "2016-12-20 10:07:11",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Promise\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle promises library",
+        "keywords": [
+            "promise"
+        ]
+    },
+    {
+        "name": "psr/http-message",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06 14:39:51",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "homepage": "https://github.com/php-fig/http-message",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
+        "name": "guzzlehttp/psr7",
+        "version": "1.3.1",
+        "version_normalized": "1.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/psr7.git",
+            "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+            "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "psr/http-message": "~1.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-06-24 23:00:38",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Psr7\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "PSR-7 message implementation",
+        "keywords": [
+            "http",
+            "message",
+            "stream",
+            "uri"
+        ]
+    },
+    {
+        "name": "guzzlehttp/guzzle",
+        "version": "6.2.2",
+        "version_normalized": "6.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle.git",
+            "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+            "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/promises": "^1.0",
+            "guzzlehttp/psr7": "^1.3.1",
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "phpunit/phpunit": "^4.0",
+            "psr/log": "^1.0"
+        },
+        "time": "2016-10-08 15:01:37",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "6.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/functions_include.php"
+            ],
+            "psr-4": {
+                "GuzzleHttp\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle is a PHP HTTP client library",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ]
+    },
+    {
+        "name": "naux/sendcloud",
+        "version": "1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/NauxLiu/Laravel-SendCloud.git",
+            "reference": "d2ac795a53c39f4460fa4fe1701b16aba9cd6be2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/NauxLiu/Laravel-SendCloud/zipball/d2ac795a53c39f4460fa4fe1701b16aba9cd6be2",
+            "reference": "d2ac795a53c39f4460fa4fe1701b16aba9cd6be2",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.1",
+            "illuminate/support": "^5.1",
+            "php": ">=5.6"
+        },
+        "time": "2016-05-05 02:14:29",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Naux\\Mail\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "NauxLiu",
+                "email": "nauxliu@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "prettus/laravel-validation",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/andersao/laravel-validator.git",
+            "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/c3501ba6b6312b8e98098783901060c0aff2b29d",
+            "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0|~5.1",
+            "illuminate/validation": "~5.0|~5.1",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-06-08 23:53:46",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Prettus\\Validator\\": "src/Prettus/Validator/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Anderson Andrade",
+                "email": "contato@andersonandra.de"
+            }
+        ],
+        "description": "Laravel Validation Service",
+        "keywords": [
+            "laravel",
+            "service",
+            "validation"
+        ]
+    },
+    {
+        "name": "prettus/l5-repository",
+        "version": "2.6.6",
+        "version_normalized": "2.6.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/andersao/l5-repository.git",
+            "reference": "05945e652bfdacd456128d69bcae91701ccc9e32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/andersao/l5-repository/zipball/05945e652bfdacd456128d69bcae91701ccc9e32",
+            "reference": "05945e652bfdacd456128d69bcae91701ccc9e32",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/config": "~5.0",
+            "illuminate/console": "~5.0",
+            "illuminate/database": "~5.0",
+            "illuminate/filesystem": "~5.0",
+            "illuminate/http": "~5.0",
+            "illuminate/pagination": "~5.0",
+            "illuminate/support": "~5.0",
+            "prettus/laravel-validation": "1.1.*"
+        },
+        "suggest": {
+            "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
+            "robclancy/presenter": "Required to use the Presenter Model (1.3.*)"
+        },
+        "time": "2016-06-27 10:43:22",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-develop": "2.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Prettus\\Repository\\": "src/Prettus/Repository/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Anderson Andrade",
+                "email": "contato@andersonandra.de",
+                "role": "Developer"
+            }
+        ],
+        "description": "Laravel 5 - Repositories to  the database layer",
+        "keywords": [
+            "cache",
+            "eloquent",
+            "laravel",
+            "model",
+            "repository"
+        ]
+    },
+    {
+        "name": "laracasts/flash",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laracasts/flash.git",
+            "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laracasts/flash/zipball/03eec812fd6ae948664ff51b4320785f6d15ee5d",
+            "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "dev-master"
+        },
+        "time": "2016-07-11 20:46:02",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Laracasts\\Flash": "src/"
+            },
+            "files": [
+                "src/Laracasts/Flash/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeffrey Way",
+                "email": "jeffrey@laracasts.com"
+            }
+        ],
+        "description": "Easy flash notifications"
+    },
+    {
+        "name": "overtrue/laravel-ueditor",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/overtrue/laravel-ueditor.git",
+            "reference": "023a7ccc2e253574b72674c6d55591e14774ab08"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/overtrue/laravel-ueditor/zipball/023a7ccc2e253574b72674c6d55591e14774ab08",
+            "reference": "023a7ccc2e253574b72674c6d55591e14774ab08",
+            "shasum": ""
+        },
+        "require-dev": {
+            "fabpot/php-cs-fixer": "^1.10"
+        },
+        "time": "2015-11-18 10:23:30",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Overtrue\\LaravelUEditor\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "overtrue",
+                "email": "anzhengchao@gmail.com"
+            }
+        ],
+        "description": "UEditor integration for Laravel."
     }
 ]
