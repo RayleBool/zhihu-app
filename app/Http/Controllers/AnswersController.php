@@ -1,30 +1,30 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Repositories\AnswerRepository;
-use App\Requests\StroeAnswerRequest;
+use App\Http\Requests\StoreAnswerRequest;
 use Auth;
+
 
 class AnswersController extends Controller
 {
-    protected $answer;
+    protected $asnwerRepository;
 
-    public function __construct(AnswerRepository $answer)
+    public function __construct(AnswerRepository $answerRepository)
     {
-        $this->$answer  = $answer;
+        $this->asnwerRepository   = $answerRepository;
     }
 
-
-    public function store(StroeAnswerRequest $request, $question)
+    public function store(StoreAnswerRequest $request, $question)
     {
-        $answer     = $this->answer->create([
+        $data       = [
             'question_id'   => $question,
             'user_id'       => Auth::id(),
             'body'          => $request->get('body'),
-        ]);
+        ];
+        $answer     = $this->asnwerRepository->create($data);
 
         $answer->question()->increment('answers_count');
 

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use Mail;
-
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
