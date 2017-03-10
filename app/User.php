@@ -43,7 +43,23 @@ class User extends Authenticatable
         return $this->id == $model->user_id;
     }
 
+    public function follows()
+    {
+        return  $this->belongsToMany(Question::class, 'user_question')->withTimestamps();
+    }
 
+    public function followThis($question)
+    {
+        return $this->follows()->toggle($question);
+        //toggle 存在删除，不存在添加
+    }
+
+    public function followed($question)
+    {
+        return !!$this->follows()->where('question_id', $question)->count();//强制返回bool
+        
+    }
+ 
     /**
      * Send the password reset notification.
      *
